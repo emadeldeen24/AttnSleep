@@ -223,9 +223,9 @@ class PositionwiseFeedForward(nn.Module):
 
 
 
-class Transformer(nn.Module):
+class AttnSleep(nn.Module):
     def __init__(self):
-        super(Transformer, self).__init__()
+        super(AttnSleep, self).__init__()
 
         N = 2  # number of TCE clones
         d_model = 80  # set to be 100 for SHHS dataset
