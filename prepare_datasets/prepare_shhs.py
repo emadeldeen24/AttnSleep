@@ -30,6 +30,8 @@ def main():
                         help="File path to the annotation files.")
     parser.add_argument("--output_dir", type=str, default="/home/abc/output_npz/shhs",
                         help="Directory where to save numpy files outputs.")
+    parser.add_argument("--select_ch", type=str, default="EEG C4-A1",
+                        help="The selected channel")
     args = parser.parse_args()
 
 
@@ -56,7 +58,8 @@ def main():
 
         raw = read_raw_edf(edf_fnames[file_id], preload=True, stim_channel=None, verbose=None)
         sampling_rate = raw.info['sfreq']
-        select_ch = [s for s in raw.info["ch_names"] if "EEG" in s][0]
+        ch_type = args.select_ch.split[" "][0]
+        select_ch = [s for s in raw.info["ch_names"] if ch_type in s][0]
 
         raw_ch_df = raw.to_data_frame(scaling_time=sampling_rate)[select_ch]
         raw_ch_df = raw_ch_df.to_frame()
