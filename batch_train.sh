@@ -1,5 +1,6 @@
 start=0
-end=19
+end=`cat config.json | jq '.data_loader.args.num_folds'`
+end=$((end-1))
 
 for i in $(eval echo {$start..$end})
 do
