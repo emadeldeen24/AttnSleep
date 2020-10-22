@@ -1,0 +1,35 @@
+{
+    "name": "Exp1",
+    "n_gpu": 1,
+
+    "arch": {
+        "type": "Transformer",
+        "args": {
+        }
+    },
+    "data_loader": {
+        "args":{
+            "batch_size": 128,
+            "num_folds": 20
+        }
+    },
+    "optimizer": {
+        "type": "Adam",
+        "args":{
+            "lr": 0.001,
+            "weight_decay": 0.001,
+            "amsgrad": true
+        }
+    },
+    "loss": "weighted_CrossEntropyLoss",
+    "metrics": [
+        "accuracy"
+    ],
+    "trainer": {
+        "epochs": 100,
+        "save_dir": "saved/",
+        "save_period": 30,
+        "verbosity": 2,
+        "monitor": "min val_loss"
+    }
+}
