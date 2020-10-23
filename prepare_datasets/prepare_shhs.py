@@ -58,7 +58,7 @@ def main():
 
         raw = read_raw_edf(edf_fnames[file_id], preload=True, stim_channel=None, verbose=None)
         sampling_rate = raw.info['sfreq']
-        ch_type = args.select_ch.split[" "][0]
+        ch_type = args.select_ch.split(" ")[0]
         select_ch = [s for s in raw.info["ch_names"] if ch_type in s][0]
 
         raw_ch_df = raw.to_data_frame(scaling_time=sampling_rate)[select_ch]
