@@ -194,7 +194,7 @@ class BaseTrainer:
 
         outs_list = []
         trgs_list = []
-        for root, dirs, files in os.walk(save_path):
+        for root, dirs, files in os.walk(self.checkpoint_dir):
             for file in files:
                 if "outs" in file:
                      outs_list.append(os.path.join(root, file))
