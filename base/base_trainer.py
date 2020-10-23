@@ -226,14 +226,14 @@ class BaseTrainer:
         cm_Save_path = os.path.join(self.checkpoint_dir, cm_file_name)
         torch.save(cm, cm_Save_path)
 
-        # copy some of the important files into the experiement folder
-        from shutil import copyfile
-        copyfile("model/model.py", os.path.join(self.checkpoint_dir, "model.py"))
-        copyfile("model/loss.py", os.path.join(self.checkpoint_dir, "loss.py"))
-        copyfile("trainer/trainer.py", os.path.join(self.checkpoint_dir, "trainer.py"))
-        copyfile("train_Kfold_CV.py", os.path.join(self.checkpoint_dir, "train_Kfold_CV.py"))
-        copyfile("config.json",  os.path.join(self.checkpoint_dir, "config.json"))
-        copyfile("data_loader/data_loaders.py",  os.path.join(self.checkpoint_dir, "data_loaders.py"))
+        # Uncomment if you want to copy some of the important files into the experiement folder
+        # from shutil import copyfile
+        # copyfile("model/model.py", os.path.join(self.checkpoint_dir, "model.py"))
+        # copyfile("model/loss.py", os.path.join(self.checkpoint_dir, "loss.py"))
+        # copyfile("trainer/trainer.py", os.path.join(self.checkpoint_dir, "trainer.py"))
+        # copyfile("train_Kfold_CV.py", os.path.join(self.checkpoint_dir, "train_Kfold_CV.py"))
+        # copyfile("config.json",  os.path.join(self.checkpoint_dir, "config.json"))
+        # copyfile("data_loader/data_loaders.py",  os.path.join(self.checkpoint_dir, "data_loaders.py"))
 
 
 
