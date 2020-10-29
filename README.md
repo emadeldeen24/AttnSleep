@@ -1,5 +1,5 @@
 # AttnSleep
-Code for AttnSleep: An Attention-based Deep Learning Approach for Sleep Stage Classification with Single-Channel EEG by: ... 
+#### AttnSleep: An Attention-based Deep Learning Approach for Sleep Stage Classification with Single-Channel EEG 
 
 The architecture of the model:
 ![AttnSleep Architecture](imgs/AttnSleep.png)
