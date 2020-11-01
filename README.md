@@ -17,8 +17,8 @@ Automatic sleep stage classification is of great importance to measure sleep qua
 - mne
 
 ## Prepare datasets
-We used two datasets in this study: 
-- [Sleep-EDF datasets](https://physionet.org/content/sleep-edfx/1.0.0/)
+We used three public datasets in this study:
+- [Sleep-EDF-20, Sleep-EDF-78](https://physionet.org/content/sleep-edfx/1.0.0/)
 - [SHHS dataset](https://sleepdata.org/datasets/shhs)
 
 
