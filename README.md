@@ -34,15 +34,15 @@ For updating the training parameters, you have to update the `config.json` file.
 In this file, you can update:
 - The experiment name (Recommended to update this for different experiments)
 - The number of GPUs.
-- Batch size
-- Number of folds (as we use K-fold cross validation)
+- Batch size.
+- Number of folds (as we use K-fold cross validation).
 - Optimizer type along with its parameters.
 - the loss function. (to update this you have to include the new loss function in the [loss.py](./model/loss.py) file).
-- the metrics you want to see while training (also to add more metrics, update the [metrics.py](./model/metric.py) file).
-- The number of epochs
-- The save directory (where the results of experiment will be saved)
-- The save_period which show the interval of saving the checkpoints and best model.
-- verbosity of log (for less logs use 0, for all logs use 2, 1 in between)
+- the evaluation metrics (also to add more metrics, update the [metrics.py](./model/metric.py) file).
+- The number of training epochs.
+- The save directory (location of saving the results of experiment)
+- The save_period (the interval of saving the checkpoints and best model).
+- verbosity of log (0 for less logs, 2 for all logs, 1 in between)
 
 
 To perform the standard K-fold cross validation, specify the number of folds in `config.json` and run the following:
@@ -50,9 +50,9 @@ To perform the standard K-fold cross validation, specify the number of folds in 
 chmod +x batch_train.sh
 ./batch_train.sh 0 /path/to/npz/files
 ```
-where the first argument represents the GPU id (If you want to use CPU, pass an ID > NUM_OF_GPUS, so if no GPUs, use 1 for example, if you have 2 GPUs and want to use CPU, pass 3 for example)
+where the first argument represents the GPU id (If you want to use CPU, pass an ID > NUM_OF_GPUS, so if no GPUs, use 1 for example, if you have 2 GPUs and want to use CPU, pass 3, and so on.)
 
-If you want to train only one specific fold, use this command:
+If you want to train only one specific fold (for example fold 10), use this command:
 ```
 python train_Kfold_CV.py --device 0 --fold_id 10 --np_data_dir /path/to/npz/files
 ```
