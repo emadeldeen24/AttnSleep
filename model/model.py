@@ -333,7 +333,7 @@ class MRCNN(nn.Module):
 
 class MRCNN_SHHS(nn.Module):
     def __init__(self, afr_reduced_cnn_size):
-        super(MRCNN, self).__init__()
+        super(MRCNN_SHHS, self).__init__()
         drate = 0.5
         self.GELU = GELU()  # for older versions of PyTorch.  For new versions use nn.GELU() instead.
         self.features1 = nn.Sequential(
