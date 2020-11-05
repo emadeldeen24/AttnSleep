@@ -187,27 +187,27 @@ class BaseTrainer:
         import pandas as pd
         import os
         from os import walk
-        
+
         n_folds = self.config["data_loader"]["args"]["num_folds"]
         all_outs = []
         all_trgs = []
 
         outs_list = []
         trgs_list = []
-        for root, dirs, files in os.walk(self.checkpoint_dir):
+        save_dir = os.path.abspath(os.path.join(self.checkpoint_dir, os.pardir))
+        for root, dirs, files in os.walk(save_dir):
             for file in files:
                 if "outs" in file:
                      outs_list.append(os.path.join(root, file))
                 if "trgs" in file:
                      trgs_list.append(os.path.join(root, file))
-    
+
         if len(outs_list)==self.config["data_loader"]["args"]["num_folds"]:
             for i in range(len(outs_list)):
                 outs = np.load(outs_list[i])
                 trgs = np.load(trgs_list[i])
                 all_outs.extend(outs)
                 all_trgs.extend(trgs)
-
 
         all_trgs = np.array(all_trgs).astype(int)
         all_outs = np.array(all_outs).astype(int)
@@ -219,12 +219,13 @@ class BaseTrainer:
         df["accuracy"] = accuracy_score(all_trgs, all_outs)
         df = df * 100
         file_name = self.config["name"] + "_classification_report.xlsx"
-        report_Save_path = os.path.join(self.checkpoint_dir, file_name)
+        report_Save_path = os.path.join(save_dir, file_name)
         df.to_excel(report_Save_path)
 
         cm_file_name = self.config["name"] + "_confusion_matrix.torch"
-        cm_Save_path = os.path.join(self.checkpoint_dir, cm_file_name)
+        cm_Save_path = os.path.join(save_dir, cm_file_name)
         torch.save(cm, cm_Save_path)
+
 
         # Uncomment if you want to copy some of the important files into the experiement folder
         # from shutil import copyfile
