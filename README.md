@@ -50,13 +50,13 @@ To perform the standard K-fold cross validation, specify the number of folds in 
 chmod +x batch_train.sh
 ./batch_train.sh 0 /path/to/npz/files
 ```
-where the first argument represents the GPU id (If you want to use CPU, pass an ID > NUM_OF_GPUS, so if no GPUs, use 1 for example, if you have 2 GPUs and want to use CPU, pass 3, and so on.)
+where the first argument represents the GPU id (If you want to use CPU, set the number of gpus to 0 in the config file)
 
-If you want to train only one specific fold (for example fold 10), use this command:
+If you want to train only one specific fold (e.g. fold 10), use this command:
 ```
 python train_Kfold_CV.py --device 0 --fold_id 10 --np_data_dir /path/to/npz/files
 ```
 ## Results
 The log file of each fold is found in the fold directory inside the save_dir.   
-The final classification report is found the directory of the last fold (for example if K=5, you will find it inside fold_4 directory), because it sums up all the previous folds results to calculate the metrics.
+The final classification report is found the experiment directory and note that it sums up all the folds results to calculate the metrics.
 
