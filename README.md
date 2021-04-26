@@ -63,7 +63,7 @@ The final classification report is found the experiment directory and note that 
 
 
 ## Contact
-Emadeldeen Eldele
-School of Computer Science and Engineering (SCSE)
-Nanyang Technological University, Singapore
-Email: emad0002{at}e.ntu.edu.sg
+Emadeldeen Eldele   
+School of Computer Science and Engineering (SCSE)   
+Nanyang Technological University, Singapore   
+Email: emad0002{at}e.ntu.edu.sg   
