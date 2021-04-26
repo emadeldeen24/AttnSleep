@@ -18,7 +18,8 @@ Automatic sleep stage classification is of great importance to measure sleep qua
 
 ## Prepare datasets
 We used three public datasets in this study:
-- [Sleep-EDF-20, Sleep-EDF-78](https://physionet.org/content/sleep-edfx/1.0.0/)
+- [Sleep-EDF-20](https://gist.github.com/emadeldeen24/a22691e36759934e53984289a94cb09b)
+- [Sleep-EDF-78](https://physionet.org/content/sleep-edfx/1.0.0/)
 - [SHHS dataset](https://sleepdata.org/datasets/shhs)
 
 
@@ -60,3 +61,9 @@ python train_Kfold_CV.py --device 0 --fold_id 10 --np_data_dir /path/to/npz/file
 The log file of each fold is found in the fold directory inside the save_dir.   
 The final classification report is found the experiment directory and note that it sums up all the folds results to calculate the metrics.
 
+
+## Contact
+Emadeldeen Eldele
+School of Computer Science and Engineering (SCSE)
+Nanyang Technological University, Singapore
+Email: emad0002{at}e.ntu.edu.sg
