@@ -10,13 +10,13 @@ Automatic sleep stage classification is of great importance to measure sleep qua
 
 ## Requirmenets:
 - Intall jq package (for linux)
-- Python3.x
-- Pytorch
+- Python3.7
+- Pytorch=='1.4'
 - Numpy
 - Sklearn
 - Pandas
 - openpyxl
-- mne
+- mne=='0.20.7'
 
 ## Prepare datasets
 We used three public datasets in this study:
