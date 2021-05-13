@@ -28,8 +28,8 @@ We used three public datasets in this study:
 After downloading the datasets, you can prepare them as follows:
 ```
 cd prepare_datasets
-python prepare_physionet.py --data_dir /path/to/PSG/files --output_dir edf_20_npz --select_ch EEG Fpz-Cz
-python prepare_shhs.py --data_dir /path/to/EDF/files --ann_dir /path/to/Annotation/files --output_dir shhs_npz --select_ch EEG C4-A1
+python prepare_physionet.py --data_dir /path/to/PSG/files --output_dir edf_20_npz --select_ch "EEG Fpz-Cz"
+python prepare_shhs.py --data_dir /path/to/EDF/files --ann_dir /path/to/Annotation/files --output_dir shhs_npz --select_ch "EEG C4-A1"
 ```
 
 ## Training AttnSleep 
