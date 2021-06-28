@@ -63,6 +63,19 @@ python train_Kfold_CV.py --device 0 --fold_id 10 --np_data_dir /path/to/npz/file
 The log file of each fold is found in the fold directory inside the save_dir.   
 The final classification report is found the experiment directory and note that it sums up all the folds results to calculate the metrics.
 
+## Citation
+```
+@article{emadeldeen_attnSleep,
+  author={Eldele, Emadeldeen and Chen, Zhenghua and Liu, Chengyu and Wu, Min and Kwoh, Chee-Keong and Li, Xiaoli and Guan, Cuntai},
+  journal={IEEE Transactions on Neural Systems and Rehabilitation Engineering}, 
+  title={An Attention-based Deep Learning Approach for Sleep Stage Classification with Single-Channel EEG}, 
+  year={2021},
+  volume={29},
+  pages={809-818},
+  doi={10.1109/TNSRE.2021.3076234}
+}
+```
+
 
 ## Contact
 Emadeldeen Eldele   
