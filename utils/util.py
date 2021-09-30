@@ -70,7 +70,7 @@ def calc_class_weight(labels_count):
     for key in range(num_classes):
         score = math.log(mu[key] * total / float(labels_count[key]))
         class_weight[key] = score if score > 1.0 else 1.0
-        class_weight[key] = round(class_weight[key] * factor, 2)
+        class_weight[key] = round(class_weight[key] * mu[key], 2)
 
     class_weight = [class_weight[i] for i in range(num_classes)]
 
