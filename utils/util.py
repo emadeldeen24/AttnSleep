@@ -65,7 +65,7 @@ def calc_class_weight(labels_count):
     num_classes = len(labels_count)
 
     factor = 1 / num_classes
-    mu = [factor * 1.5, factor * 2, factor * 1.5, factor, factor * 1.5]
+    mu = [factor * 1.5, factor * 2, factor * 1.5, factor, factor * 1.5] # THESE CONFIGS ARE FOR SLEEP-EDF-20 ONLY
 
     for key in range(num_classes):
         score = math.log(mu[key] * total / float(labels_count[key]))
