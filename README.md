@@ -19,6 +19,8 @@ Automatic sleep stage classification is of great importance to measure sleep qua
 - mne=='0.20.7'
 
 ## Prepare datasets
+> `Update:` The preprocessed datasets are now available [on this Dataverse](https://researchdata.ntu.edu.sg/dataverse/attnSleep)
+
 We used three public datasets in this study:
 - [Sleep-EDF-20](https://gist.github.com/emadeldeen24/a22691e36759934e53984289a94cb09b)
 - [Sleep-EDF-78](https://physionet.org/content/sleep-edfx/1.0.0/)
