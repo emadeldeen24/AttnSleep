@@ -75,7 +75,7 @@ class BaseTrainer:
                 self.logger.info('    {:15s}: {}'.format(str(key), value))
 
             # evaluate model performance according to configured metric, save best checkpoint as model_best
-            best = True
+            best = False #True
             if self.mnt_mode != 'off':
                 try:
                     # check whether model performance improved or not, according to specified metric(mnt_metric)
