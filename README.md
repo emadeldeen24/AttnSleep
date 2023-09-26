@@ -3,6 +3,8 @@
 #### *by: Emadeldeen Eldele, Zhenghua Chen, Chengyu Liu, Min Wu, Chee-Keong Kwoh, Xiaoli Li, and Cuntai Guan* 
 This work has been accepted for publication in [IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE).](https://ieeexplore.ieee.org/document/9417097)
 
+## :boom::boom: *Update:* We received the 3rd Prize in the 2023 IEEE Engineering in Medicine and Biology Prize Paper Award. This award recognizes the outstanding contributions provided in this work!
+
 ## Abstract
 ![AttnSleep Architecture](imgs/AttnSleep.png)
 Automatic sleep stage classification is of great importance to measure sleep quality. In this paper, we propose a novel attention-based deep learning architecture called AttnSleep to classify sleep stages using single channel EEG signals. This architecture starts with the feature extraction module based on multi-resolution convolutional neural network (MRCNN) and adaptive feature recalibration (AFR). The MRCNN can extract low and high frequency features and the AFR is able to improve the quality of the extracted features by modeling the inter-dependencies between the features. The second module is the temporal context encoder (TCE) that leverages a multi-head attention mechanism to capture the temporal dependencies among the extracted features. Particularly, the multi-head attention deploys causal convolutions to model the temporal relations in the input features. We evaluate the performance of our proposed AttnSleep model using three public datasets. The results show that our AttnSleep outperforms state-of-the-art techniques in terms of different evaluation metrics.
