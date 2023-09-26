@@ -3,7 +3,7 @@
 #### *by: Emadeldeen Eldele, Zhenghua Chen, Chengyu Liu, Min Wu, Chee-Keong Kwoh, Xiaoli Li, and Cuntai Guan* 
 This work has been accepted for publication in [IEEE Transactions on Neural Systems and Rehabilitation Engineering (TNSRE).](https://ieeexplore.ieee.org/document/9417097)
 
-## :boom::boom: *Update:* We received the 3rd Prize in the 2023 IEEE Engineering in Medicine and Biology Prize Paper Award. This award recognizes the outstanding contributions provided in this work!
+## :boom::boom: *Update [Sep 2023]:* We received the 3rd Prize in the 2023 IEEE Engineering in Medicine and Biology Prize Paper Award. This prestigious award recognizes the outstanding contributions provided in this work!
 
 ## Abstract
 ![AttnSleep Architecture](imgs/AttnSleep.png)
